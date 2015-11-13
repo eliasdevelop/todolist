@@ -1,0 +1,427 @@
+
+
+Started GET "/" for ::1 at 2015-11-12 18:03:22 -0300
+Processing by TodosController#index as HTML
+  Rendered todos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1099ms (Views: 1088.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-12 18:03:23 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-12 18:03:23 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-12 18:03:23 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-12 18:03:23 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-12 18:03:23 -0300
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodos (20151112232053)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "todos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151112232053"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2015-11-12 21:10:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.5ms)[0m  SELECT "todos".* FROM "todos"
+  Rendered todos/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 222ms (Views: 204.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 21:10:05 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"[0m
+  Rendered todos/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todos/new" for ::1 at 2015-11-12 21:10:07 -0300
+Processing by TodosController#new as HTML
+  Rendered todos/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/todos" for ::1 at 2015-11-12 21:10:26 -0300
+Processing by TodosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UiZwzHh1F/1Ftq0AN+/rJFJSu5h2XxyKPL+tkqqJvIum6MzRR/1kGIfwUu5NmNrabK8DARYTDmWxUwIH6ZvgxQ==", "todo"=>{"title"=>"Comprar vassoura"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "todos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Comprar vassoura"], ["created_at", "2015-11-13 00:10:26.017724"], ["updated_at", "2015-11-13 00:10:26.017724"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 21:10:26 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT "todos".* FROM "todos"[0m
+  Rendered todos/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 23:35:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodosController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-12 23:35:27 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 231ms (Views: 230.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 23:35:27 -0300
+Processing by TodosController#index as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2015-11-12 23:35:27 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-11-12 23:35:35 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sDKMmuUYkQk6BCvRms+QKAj+f/E5dUGzQn6kZ9+JwmdE/DCH2pDi7PhC1D/guKHWNgPHaFk5U1zPkgvynJueKQ==", "session"=>{"email"=>"elias@oi.com"}, "commit"=>"Sign in"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 23:35:35 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"
+  Rendered todos/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 23:35:39 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT "todos".* FROM "todos"[0m
+  Rendered todos/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddEmailToTodo (20151113024020)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "todos" ADD "email" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151113024020"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2015-11-13 00:03:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"
+  Rendered todos/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 219ms (Views: 205.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 00:03:17 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"[0m
+  Rendered todos/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todos/new" for ::1 at 2015-11-13 00:03:29 -0300
+Processing by TodosController#new as HTML
+  Rendered todos/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCompletedAtToTodo (20151113132020)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "todos" ADD "completed_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151113132020"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2015-11-13 10:50:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 216ms (Views: 199.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todos/new" for ::1 at 2015-11-13 10:50:26 -0300
+Processing by TodosController#new as HTML
+  Rendered todos/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 48ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/todos" for ::1 at 2015-11-13 10:50:36 -0300
+Processing by TodosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rANc0g67ITSbMLBVzvxkFxQGowhPxGm6efLMR0nVD65YzeDPMTNS0Vl2T7u0i1XpKvsbkS+Ie1X0HmPSCsdT4A==", "todo"=>{"title"=>"Comprar vassoura"}, "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todos" ("email", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "elias@oi.com"], ["title", "Comprar vassoura"], ["created_at", "2015-11-13 13:50:36.364814"], ["updated_at", "2015-11-13 13:50:36.364814"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 10:50:36 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/todos/2/completion" for ::1 at 2015-11-13 10:50:38 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"AH2undQrFo9zwYNn6oDQijI6FHSKufdbC1eaotejUdX0sxKA66NlarGHfImQ9+F0DMes7er15bSGuzU3lLENmw==", "todo_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "updated_at" = '2015-11-13 13:50:38.934909', "completed_at" = '2015-11-13 13:50:38.934909' WHERE "todos"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 10:50:38 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todos/new" for ::1 at 2015-11-13 10:51:03 -0300
+Processing by TodosController#new as HTML
+  Rendered todos/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todos" for ::1 at 2015-11-13 10:51:12 -0300
+Processing by TodosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2iK5iYwGI9tyyjmGovPhLqhgUfcK0dztQHN58JeEUQLpjb7Gbhraq+N1whg/P56hFw53rxnVZw47WJygUxNCg==", "todo"=>{"title"=>"A fazer"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todos" ("email", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "elias@oi.com"], ["title", "A fazer"], ["created_at", "2015-11-13 13:51:12.994981"], ["updated_at", "2015-11-13 13:51:12.994981"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 10:51:13 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 230ms (Views: 213.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:46 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/2/completion" for ::1 at 2015-11-13 12:16:49 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+pWRNMiNKF/+E6uD8v9giaVTkPijaboEdg36SUU61UUOWy0p9wVbujxVVG2IiFF3m64oYcMlqOv74VXcBiiJCw==", "todo_id"=>"2"}
+  [1m[35mTodo Load (0.2ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:49 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/todos/2/completion" for ::1 at 2015-11-13 12:16:50 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EzLj+K2aIWcK76IbX4z1YPVmVPSQB/rJctBFyQoYanTn/F/lkhJSgsipXfUl+8Sey5vsbfBL6Cb/POpcSQo2Og==", "todo_id"=>"2"}
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "updated_at" = '2015-11-13 15:16:50.658342', "completed_at" = '2015-11-13 15:16:50.658342' WHERE "todos"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 12:16:50 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/2/completion" for ::1 at 2015-11-13 12:16:51 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X0NpdAK45BAL2Enl4fL9Tr5P31J69ALBe7b29ikVFAyrjdVpPTCX9cmetgubhcywgLJnyxq4EC72WlljagdIQg==", "todo_id"=>"2"}
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:51 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/todos/2/completion" for ::1 at 2015-11-13 12:16:52 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EwN1oatqyIfS62aYR/UhnIwqlvKsWBNMNRyY6lGGM2/nzcm8lOK7YhCtmXY9ghBistcua8wUAaO48Dd/EpRvIQ==", "todo_id"=>"2"}
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "updated_at" = '2015-11-13 15:16:52.226937', "completed_at" = '2015-11-13 15:16:52.226937' WHERE "todos"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 12:16:52 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/2/completion" for ::1 at 2015-11-13 12:16:53 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"641mHB8P5xfwHmpntnqk6sEY9oAy5S8mAWooBQGAnQsfQ9oBIIeU8jJYlYnMDZUU/+VOGVKpPcmMhoeQQpLBRQ==", "todo_id"=>"2"}
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:53 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/todos/3/completion" for ::1 at 2015-11-13 12:16:53 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"/qJMwNb/IO+J516JZ1UVLu67W/HT63rkQKTc1PCcUyUKbPDd6XdTCkuhoWcdIiTQ0EbjaLOnaAvNSHNBs44Paw==", "todo_id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "updated_at" = '2015-11-13 15:16:53.962833', "completed_at" = '2015-11-13 15:16:53.962833' WHERE "todos"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 12:16:53 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/3/completion" for ::1 at 2015-11-13 12:16:54 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KSCHIwo91xLZ23WRH8uAAJaG9P7qxRTLH8tMwYaC8Gnd7js+NbWk9xudin9lvLH+qHtMZ4qJBiSSJ+NUxZCsJw==", "todo_id"=>"3"}
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 3]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:54 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.3ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/todos/3/completion" for ::1 at 2015-11-13 12:16:55 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"q9BftWiAaDi1BnEW8OfBuLSQS52zLBWQFYsoRGaUFERfHuOoVwgb3XdAjviKkPBGim3zBNNgB3+YZ4fRJYZICg==", "todo_id"=>"3"}
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "updated_at" = '2015-11-13 15:16:55.384937', "completed_at" = '2015-11-13 15:16:55.384937' WHERE "todos"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 12:16:55 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/todos/2/completion" for ::1 at 2015-11-13 12:16:56 -0300
+Processing by CompletionsController#create as HTML
+  Parameters: {"authenticity_token"=>"odCwxhRhyrtyXsUV1FDV1we3tRw+uVTXQ1JnPm8IYLtVHgzbK+m5XrAYOvuuJ+QpOUoNhV71RjjOvsirLBo89Q==", "todo_id"=>"2"}
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "todos" SET "updated_at" = '2015-11-13 15:16:56.293205', "completed_at" = '2015-11-13 15:16:56.293205' WHERE "todos"."id" = ?  [["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todos
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todos" for ::1 at 2015-11-13 12:16:56 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/2/completion" for ::1 at 2015-11-13 12:16:56 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0dD2Uv5GQIDUcvZ0dYQdJfEq9i63vkPKzYjyoJfi5m0lHkpPwc4zZRY0CZoP8yzbz9dOt9fyUSVAZF011PC6Iw==", "todo_id"=>"2"}
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1[0m  [["email", "elias@oi.com"], ["id", 2]]
+  [1m[35mSQL (0.7ms)[0m  UPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:56 -0300
+Processing by TodosController#index as HTML
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos" WHERE "todos"."email" = ?[0m  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/todos/3/completion" for ::1 at 2015-11-13 12:16:58 -0300
+Processing by CompletionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QP/k20R3wQEporL5pO9CQR73P3FAebXy+GyFB290UTe0MVjGe/+y5OvkTRfemHO/IAqH6CA1px11gCqSLGYNeQ==", "todo_id"=>"3"}
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos" WHERE "todos"."email" = ? AND "todos"."id" = ? LIMIT 1  [["email", "elias@oi.com"], ["id", 3]]
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "todos" SET "completed_at" = NULL WHERE "todos"."id" = ?[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-13 12:16:58 -0300
+Processing by TodosController#index as HTML
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos" WHERE "todos"."email" = ?  [["email", "elias@oi.com"]]
+  Rendered todos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.1ms)
